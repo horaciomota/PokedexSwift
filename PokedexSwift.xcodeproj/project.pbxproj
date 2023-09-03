@@ -13,6 +13,7 @@
 		83F960132AA4A04800169AA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F960122AA4A04800169AA5 /* Preview Assets.xcassets */; };
 		83F9601C2AA4A13600169AA5 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9601B2AA4A13600169AA5 /* Pokemon.swift */; };
 		83F9601E2AA4B4AA00169AA5 /* PokemonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9601D2AA4B4AA00169AA5 /* PokemonSelected.swift */; };
+		83F960202AA4BCFC00169AA5 /* PokemonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9601F2AA4BCFC00169AA5 /* PokemonImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		83F960122AA4A04800169AA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83F9601B2AA4A13600169AA5 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		83F9601D2AA4B4AA00169AA5 /* PokemonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelected.swift; sourceTree = "<group>"; };
+		83F9601F2AA4BCFC00169AA5 /* PokemonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				83F9600D2AA4A04600169AA5 /* ContentView.swift */,
+				83F9601F2AA4BCFC00169AA5 /* PokemonImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F9600E2AA4A04600169AA5 /* ContentView.swift in Sources */,
+				83F960202AA4BCFC00169AA5 /* PokemonImage.swift in Sources */,
 				83F9600C2AA4A04600169AA5 /* PokedexSwiftApp.swift in Sources */,
 				83F9601E2AA4B4AA00169AA5 /* PokemonSelected.swift in Sources */,
 				83F9601C2AA4A13600169AA5 /* Pokemon.swift in Sources */,

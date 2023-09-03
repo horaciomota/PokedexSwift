@@ -14,7 +14,7 @@ struct Pokemon : Codable{
 }
 
 struct PokemonEntry : Codable, Identifiable  {
-    var id = UUID()
+    let id = UUID()
     var name: String
     var url: String
 }
