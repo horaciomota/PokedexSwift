@@ -18,14 +18,10 @@ struct ContentView: View {
         .padding()
         .onAppear {
             
-            PokeApi().getData() {pokemon in
-                
-                print(pokemon)
-                
-                for pokemon in pokemon {
-                    print(pokemon.name)
-                }
-            }
+            PokemonSelectedApi().getData(url: "https://pokeapi.co/api/v2/pokemon/3/") {
+                url in
+                print(url)
+            } 
         }
     }
 }
