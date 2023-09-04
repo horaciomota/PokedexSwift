@@ -37,6 +37,8 @@ struct ContentView: View {
                 .navigationTitle("PokedexUI")
             }
         }
+    
+
     }
 
     struct ContentView_Previews: PreviewProvider {

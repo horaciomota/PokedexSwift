@@ -12,6 +12,7 @@ struct PokedexSwiftApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                
         }
     }
 }

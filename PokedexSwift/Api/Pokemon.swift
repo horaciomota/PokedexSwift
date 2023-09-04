@@ -36,66 +36,45 @@ class PokeApi  {
     }
 }
 
-
-//Fazendo requisicao do jeito mais simpes posivel
-
-//1 - CRIAR A ESTRUTURA DO OBJETO, ja que e uma lista de nomes eu vou criar um array que vai  segurar esses nones
-
 struct listaDePokemons: Codable {
-    var pokemons: [pokemonsResponse]
+    
+    var pokemonsListados: [pokemons]
+    
 }
 
-//2 - Criar o formato do objeto para aguardar o respnse, o objeto vai  ter que ser decodable por que eu vou receber em json e vou passar para swift
 
-struct pokemonsResponse: Codable {
+struct pokemons: Codable {
     
     var name: String
+    var type: String
+    var abilities: [String]
     
 }
-
-
-
-//3 - Agora eu tenho que criar o formato mais simples de request de API come;ancdo sempre com o class e depois a funcao
 
 class pokemonApi {
-    
-    func getPokemon() {
+    func getData() {
         
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=151") else {return}
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error ) in
-            
+        guard let url = URL(string: "a chave da API vai aqui") else {return}
+        URLSession.shared.dataTask(with: url) {(data, response, error) in
             if let data = data {
-                
                 do {
-                    let pokemons = try JSONDecoder().decode(listaDePokemons.self, from: data)
+                    let pokemonsListados = try JSONDecoder().decode(listaDePokemons.self, from: data)
                 } catch {
-                    print("Error on decode Json \(error)")
+                    print("Erro de rede: \(error)")
+                    return
                 }
+            
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    print("Resposta inválida da API")
+                    return}
                 
-                return}
-            
-            guard let response = response as? HTTPURLResponse else {return}
-            
-            if let error {
-                print("Error on get the API: \(error)")
+                if let error {return}
+                
             }
-            
-            
-            
-        }
-        
-        
-        
+        }.resume()
         
     }
-    
-    
-    
 }
-
-
-
 
 
 //class PokemonApi {
